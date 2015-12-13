@@ -6,13 +6,18 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+  <link rel="stylesheet" href="css/tipTip.css" />
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="//cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tipTip.minified.js"></script>
+  <script type="text/javascript" src="js/jquery.animate.backgroundcolor.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
   <script type="text/javascript">
     $(function() {
       $('.ymlist').DataTable({order: [[ 0, 'asc' ]], paging: false, info: false});
+      $('.ymlist th[title]').tipTip(tiptip_options);
     });
   </script>
 </head>
@@ -37,16 +42,16 @@
         <table class="table table-condensed table-hover table-bordered ymlist">
           <thead>
             <tr>
-              <th>名称</th>
-              <th>略称</th>
-              <th>FM出力</th>
-              <th>FM</th>
-              <th>オペレータ</th>
-              <th>リズム</th>
-              <th>PSG</th>
-              <th>ADPCM</th>
-              <th>標準クロック</th>
-              <th>DAC</th>
+              <th title="ICの名称">名称</th>
+              <th title="そのICにおける略称。OperatorType-* の略">略称</th>
+              <th title="FM部のミックス後の出力チャネル">FM出力</th>
+              <th title="FM部の出力チャネル数">FM</th>
+              <th title="FM部のオペレータ数">オペレータ</th>
+              <th title="リズム部のチャネル数">リズム</th>
+              <th title="PSG部 (または SSG) のチャネル数">PSG</th>
+              <th title="ADPCM部の搭載可否">ADPCM</th>
+              <th title="ICにおける標準的 (STD) な入力クロック φM">標準クロック</th>
+              <th title="使用されるDAC">DAC</th>
             </tr>
           </thead>
           <tbody>
@@ -280,19 +285,19 @@
             </tr>
           </tbody>
         </table>
-        <ul class="list-inline">
+        <ul class="footnote list-inline">
           <li>[1]</li>
           <li>X68000シリーズでは 4.0 MHzを入力していた。</li>
         </ul>
-        <ul class="list-inline">
+        <ul class="footnote list-inline">
           <li>[2]</li>
           <li>標準クロック周波数は規定なし。0.7 ～ 4.2 MHzまで入力可能。VGMフォーマットでの標準クロック周波数は 3.0 MHz。</li>
         </ul>
-        <ul class="list-inline">
+        <ul class="footnote list-inline">
           <li>[3]</li>
           <li>9.4265 MHzとあり、正確な数値は不明。</li>
         </ul>
-        <ul class="list-inline">
+        <ul class="footnote list-inline">
           <li>[4]</li>
           <li>33.8388 MHzとあり、正確な数値は不明。</li>
         </ul>

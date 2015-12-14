@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
   <link rel="stylesheet" href="css/tipTip.css" />
+  <link rel="stylesheet" href="css/common.css" />
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
@@ -53,6 +54,8 @@
               <th title="ICにおける標準的 (STD) な入力クロック φM">標準クロック</th>
               <th title="使用されるDAC">DAC</th>
               <th title="レジスタのアドレス空間の大きさ (単位: バイト)">アドレス空間</th>
+              <th title="VGMフォーマットでのサポートバージョン">VGM</th>
+              <th title="S98フォーマットバージョン3でのサポート">S98</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +71,8 @@
               <td>9,426,500 Hz <sup>[3]</sup></td>
               <td>?</td>
               <td>?</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2151</td>
@@ -75,12 +80,14 @@
               <td>ステレオ</td>
               <td>8ch</td>
               <td>4</td>
-              <td>N/A</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>3,579,545 Hz <sup>[1]</sup></td>
               <td>YM3012</td>
               <td>256</td>
+              <td class="color-yes">1.10</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM2164</td>
@@ -88,12 +95,14 @@
               <td>ステレオ</td>
               <td>8ch</td>
               <td>4</td>
-              <td>N/A</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>3,579,545 Hz <sup>[8]</sup></td>
               <td>YM3012</td>
               <td>256</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2203<br />YM2203C</td>
@@ -101,12 +110,14 @@
               <td>モノラル</td>
               <td>3ch</td>
               <td>4</td>
-              <td>N/A</td>
-              <td>3ch</td>
-              <td>なし</td>
+              <td class="color-no">N/A</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-no">No</td>
               <td>N/A <sup>[2]</sup></td>
               <td>YM3014B</td>
               <td>256</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM2413<br />YM2413B<br />YM2413B-F</td>
@@ -114,12 +125,14 @@
               <td>モノラル</td>
               <td>9ch<br />6ch</td>
               <td>2</td>
-              <td>0ch<br />5ch</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-yes">0ch<br />5ch</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>3,579,545 Hz <sup>[5]</sup></td>
               <td>N/A <sup>[6]</sup></td>
               <td>256</td>
+              <td class="color-yes">1.00</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM2414</td>
@@ -133,6 +146,8 @@
               <td>?</td>
               <td>YM3012 ?</td>
               <td>?</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2424</td>
@@ -146,6 +161,8 @@
               <td>?</td>
               <td>YM3012 ?</td>
               <td>?</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2604</td>
@@ -159,6 +176,8 @@
               <td>9,426,500 Hz <sup>[3]</sup></td>
               <td>?</td>
               <td>?</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2608</td>
@@ -166,12 +185,14 @@
               <td>ステレオ</td>
               <td>6ch</td>
               <td>4</td>
-              <td>6ch</td>
-              <td>3ch</td>
-              <td>あり</td>
+              <td class="color-yes">6ch</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-yes">Yes</td>
               <td>8,000,000 Hz <sup>[9]</sup></td>
               <td>YM3016-D</td>
               <td>512</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM2610</td>
@@ -179,12 +200,14 @@
               <td>ステレオ</td>
               <td>4ch</td>
               <td>4</td>
-              <td>6ch</td>
-              <td>3ch</td>
-              <td>あり</td>
+              <td class="color-yes">6ch</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-yes">Yes</td>
               <td>8,000,000 Hz</td>
               <td>YM3016-D</td>
               <td>512</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2610B</td>
@@ -192,12 +215,14 @@
               <td>ステレオ</td>
               <td>6ch</td>
               <td>4</td>
-              <td>6ch</td>
-              <td>3ch</td>
-              <td>あり</td>
+              <td class="color-yes">6ch</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-yes" class="color-yes">Yes</td>
               <td>8,000,000 Hz</td>
               <td>YM3016-D</td>
               <td>512</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YM2612<br />YM3438</td>
@@ -205,12 +230,14 @@
               <td>ステレオ</td>
               <td>6ch</td>
               <td>4</td>
-              <td>N/A</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>7,670,453 Hz</td>
               <td>N/A <sup>[7]</sup></td>
               <td>512</td>
+              <td class="color-yes">1.10</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM3526</td>
@@ -218,12 +245,14 @@
               <td>モノラル</td>
               <td>9ch<br />6ch</td>
               <td>2</td>
-              <td>0ch<br />5ch</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-yes">0ch<br />5ch</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>3,579,545 Hz</td>
               <td>YM3014B</td>
               <td>256</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YM3812</td>
@@ -231,12 +260,14 @@
               <td>モノラル</td>
               <td>9ch<br />6ch</td>
               <td>2</td>
-              <td>0ch<br />5ch</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-yes">0ch<br />5ch</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>3,579,545 Hz</td>
               <td>YM3014B</td>
               <td>256</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YMF262-M<br />YMF262-S<br />YMF289B-S</td>
@@ -244,12 +275,14 @@
               <td>ステレオ <sup>[13]</sup></td>
               <td>18ch<br />15ch<br />6+6ch<br />3+6ch</td>
               <td>2<br />2<br />2+4<br />2+4</td>
-              <td>0ch<br />5ch<br />0ch<br />5ch</td>
-              <td>N/A</td>
-              <td>なし</td>
+              <td class="color-yes">0ch<br />5ch<br />0ch<br />5ch</td>
+              <td class="color-no">N/A</td>
+              <td class="color-no">No</td>
               <td>14,317,816 Hz</td>
               <td>YAC512</td>
               <td>512</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-yes">Yes</td>
             </tr>
             <tr>
               <td>YMF278B-F<br />YMF278B-S</td>
@@ -257,12 +290,14 @@
               <td>ステレオ</td>
               <td>18ch<br />15ch<br />6+6ch<br />3+6ch</td>
               <td>2<br />2<br />2+4<br />2+4</td>
-              <td>0ch<br />5ch<br />0ch<br />5ch</td>
+              <td class="color-yes">0ch<br />5ch<br />0ch<br />5ch</td>
               <td>?</td>
-              <td>あり<br />(PCM 24ch)</td>
+              <td class="color-yes">Yes<br />(PCM 24ch)</td>
               <td>33,868,800 Hz</td>
               <td>YAC513</td>
               <td>512</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YMF288-M<br />YMF288-S</td>
@@ -270,12 +305,14 @@
               <td>ステレオ</td>
               <td>6ch</td>
               <td>4</td>
-              <td>6ch</td>
-              <td>3ch</td>
-              <td>なし</td>
+              <td class="color-yes">6ch</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-no">No</td>
               <td>8,000,000 Hz <sup>[9]</sup></td>
               <td>N/A <sup>[10]</sup></td>
               <td>512</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YMF271-F</td>
@@ -285,10 +322,12 @@
               <td>2-4</td>
               <td>?</td>
               <td>?</td>
-              <td>あり<br />(PCM 12ch)</td>
+              <td class="color-yes">Yes<br />(PCM 12ch)</td>
               <td>16,934,400 Hz</td>
               <td>YAC513</td>
               <td>?</td>
+              <td class="color-yes">1.51</td>
+              <td class="color-no">No</td>
             </tr>
             <tr>
               <td>YMF297-F</td>
@@ -296,12 +335,14 @@
               <td>ステレオ</td>
               <td>20ch<sup>[12]</sup><br />6ch<sup>[11]</sup><br />6ch<sup>[12]</sup></td>
               <td>2<sup>[12]</sup><br />4<sup>[11]</sup><br />4<sup>[12]</sup></td>
-              <td>6ch</td>
-              <td>3ch</td>
-              <td>なし</td>
+              <td class="color-yes">6ch</td>
+              <td class="color-yes">3ch</td>
+              <td class="color-no">No</td>
               <td>16,934,400 Hz</td>
               <td>N/A <sup>[10]</sup></td>
               <td>512</td>
+              <td class="color-no">No</td>
+              <td class="color-no">No</td>
             </tr>
           </tbody>
         </table>

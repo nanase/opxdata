@@ -5,3 +5,34 @@
 .color-yes {
     background-color: rgba(0, 255, 0, 0.25);
 }
+
+.color-unused {
+    background-color: rgba(192, 192, 192, 0.33);
+}
+
+.bnone {
+    border: none !important;
+}
+
+.row-section {
+    border-top: solid 2px #ddd;
+}
+
+.cell-double {
+    line-height: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 0 !important;
+}
+
+.table-register > tbody > tr > td {
+    padding: 0;
+    vertical-align: middle;
+}
+.table-register > thead > tr > th {
+    text-align: center;
+}
+.table-space {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 3px !important;
+}

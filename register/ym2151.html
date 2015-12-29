@@ -1,0 +1,2511 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>YM2151 レジスタマップ - YMシリーズデータ</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+  <link rel="stylesheet" href="css/tipTip.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tipTip.minified.js"></script>
+  <script type="text/javascript" src="js/jquery.animate.backgroundcolor.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('table.table th[title]').tipTip(tiptip_options);
+      $('.tip').tipTip(tiptip_options);
+      //$('.table-register>tbody>tr').filter(function(){return $(this).children('.color-unused').length == 8})
+
+      $('#suppress_unused').change(function(){
+        var t = $('.table-register>tbody>tr').filter(function(){return $(this).children('.color-unused').length >= 8})
+        $(this).is(':checked') ? t.hide() : t.show();
+      }).prop('checked', false);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li><a href="./">トップ</a></li>
+        <li><a href="comparison.html"><span class="glyphicon glyphicon-th"></span> 仕様比較表</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> チップ情報 <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> レジスタマップ <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="register/ym2151.html">OPM (YM2151)</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3 class="text-muted">YM2151 レジスタマップ - YMシリーズデータ</h3>
+      <hr />
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <table class="table table-condensed table-hover table-bordered text-center table-register">
+          <thead>
+            <tr>
+              <th title="レジスタのアドレス">ad</th>
+              <th>+0</th>
+              <th>+1</th>
+              <th>+2</th>
+              <th>+3</th>
+              <th>+4</th>
+              <th>+5</th>
+              <th>+6</th>
+              <th>+7</th>
+              <th>+8</th>
+              <th>+9</th>
+              <th>+A</th>
+              <th>+B</th>
+              <th>+C</th>
+              <th>+D</th>
+              <th>+E</th>
+              <th>+F</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-section">
+              <td>00</td>
+              <td class="color-unused"></td>
+              <td>TEST</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td>NOTE</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td>NS</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td colspan="2">CLA</td>
+              <td>CLB</td>
+              <td class="color-unused"></td>
+              <td>TC</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td>LFRQ</td>
+              <td>LFO</td>
+              <td class="color-unused"></td>
+              <td>CT/W</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr class="row-section">
+              <td>20</td>
+              <td colspan="8">RL / FL / CON</td>
+              <td colspan="8">KC</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td colspan="8">KF</td>
+              <td colspan="8">PMS / AMS</td>
+            </tr>
+            <tr>
+              <td>40</td>
+              <td colspan="16" rowspan="2">DT1 / MUL</td>
+            </tr>
+            <tr>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>60</td>
+              <td colspan="16" rowspan="2">TL</td>
+            </tr>
+            <tr>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td>80</td>
+              <td colspan="16" rowspan="2">KS / AR</td>
+            </tr>
+            <tr>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>A0</td>
+              <td colspan="16" rowspan="2">AME / D1R</td>
+            </tr>
+            <tr>
+              <td>B0</td>
+            </tr>
+            <tr>
+              <td>C0</td>
+              <td colspan="16" rowspan="2">DT2 / D2R</td>
+            </tr>
+            <tr>
+              <td>D0</td>
+            </tr>
+            <tr>
+              <td>E0</td>
+              <td colspan="16" rowspan="2">D1L / RR</td>
+            </tr>
+            <tr>
+              <td>F0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="suppress_unused" />未使用のレジスタを表示しない
+          </label>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <table class="table table-condensed table-hover table-bordered text-center table-register">
+          <thead>
+            <tr>
+              <th title="レジスタのアドレス">ad</th>
+              <th>D7</th>
+              <th>D6</th>
+              <th>D5</th>
+              <th>D4</th>
+              <th>D3</th>
+              <th>D2</th>
+              <th>D1</th>
+              <th>D0</th>
+              <th class="table-space"></th>
+              <th>ch</th>
+              <th>op</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-section">
+              <td>00</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td rowspan="2">01</td>
+              <td colspan="8" class="bnone cell-double">TEST</td>
+              <th class="table-space" rowspan="2"></th>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="6" class="bnone"></td>
+              <td class="tip" title="LFO Reset">LRST</td>
+              <td class="bnone"></td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td rowspan="2">08</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" colspan="4" title="Key ON/OFF">SN</td>
+              <td colspan="3" rowspan="2" class="tip" title="Key ON/OFF Channel Number">CH No.</td>
+              <th class="table-space" rowspan="2"></th>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="Operator 4">op.4</td>
+              <td class="tip" title="Operator 2">op.2</td>
+              <td class="tip" title="Operator 3">op.3</td>
+              <td class="tip" title="Operator 1">op.1</td>
+            </tr>
+            <tr>
+              <td>09</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0A</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0B</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0C</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0D</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0E</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>0F</td>
+              <td class="tip" title="Noise Enable">NE</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Noise Frequency" colspan="5">NFRQ</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+
+            <tr class="row-section">
+              <td>10</td>
+              <td class="tip bnone" title="Clock A (10 bits)" colspan="8">CLKA1</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip bnone" title="Clock A (10 bits)" colspan="2">CLKA2</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td class="tip" title="Clock B" colspan="8">CLKB</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td rowspan="2">14</td>
+              <td class="tip" title="Flag Reset" rowspan="2">CSM</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="Flag Reset" colspan="2">F-RESET</td>
+              <td class="tip" title="IRQ Enable" colspan="2">IRQEN</td>
+              <td colspan="2">LOAD</td>
+              <th class="table-space" rowspan="2"></th>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>A</td>
+              <td>B</td>
+              <td>A</td>
+              <td>B</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td class="tip" title="LFO Frequency" colspan="8">LFRQ</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td class="tip" title="LFO Depth Target">F</td>
+              <td class="tip" title="LFO Depth" colspan="7">PMD/AMD</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1A</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1B</td>
+              <td class="tip" title="ADPCM Clock">CT1</td>
+              <td class="tip" title="FDC ready">CT2</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="LFO Waveform" colspan="2">W</td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1C</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1D</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1E</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>1F</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+            </tr>
+
+            <tr class="row-section">
+              <td>20</td>
+              <td class="tip" title="channel 1 : R channel enable">R</td>
+              <td class="tip" title="channel 1 : L channel enable">L</td>
+              <td class="tip" title="channel 1 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 1 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td class="tip" title="channel 2 : R channel enable">R</td>
+              <td class="tip" title="channel 2 : L channel enable">L</td>
+              <td class="tip" title="channel 2 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 2 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>2</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td class="tip" title="channel 3 : R channel enable">R</td>
+              <td class="tip" title="channel 3 : L channel enable">L</td>
+              <td class="tip" title="channel 3 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 3 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>3</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td class="tip" title="channel 4 : R channel enable">R</td>
+              <td class="tip" title="channel 4 : L channel enable">L</td>
+              <td class="tip" title="channel 4 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 4 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>4</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td class="tip" title="channel 5 : R channel enable">R</td>
+              <td class="tip" title="channel 5 : L channel enable">L</td>
+              <td class="tip" title="channel 5 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 5 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>5</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td class="tip" title="channel 6 : R channel enable">R</td>
+              <td class="tip" title="channel 6 : L channel enable">L</td>
+              <td class="tip" title="channel 6 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 6 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>6</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td class="tip" title="channel 7 : R channel enable">R</td>
+              <td class="tip" title="channel 7 : L channel enable">L</td>
+              <td class="tip" title="channel 7 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 7 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>7</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td class="tip" title="channel 8 : R channel enable">R</td>
+              <td class="tip" title="channel 8 : L channel enable">L</td>
+              <td class="tip" title="channel 8 : Feedback Level" colspan="3">FL</td>
+              <td class="tip" title="channel 8 : Connection (Algorithm)" colspan="3">CON</td>
+              <th class="table-space"></th>
+              <td>8</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td rowspan="2">28</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 1 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">1</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 1 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 1 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">29</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 2 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">2</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 2 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 2 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2A</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 3 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">3</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 3 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 3 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2B</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 4 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">4</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 4 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 4 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2C</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 5 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">5</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 5 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 5 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2D</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 6 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">6</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 6 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 6 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2E</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 7 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">7</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 7 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 7 : Note" colspan="4">NOTE</td>
+            </tr>
+            <tr>
+              <td rowspan="2">2F</td>
+              <td class="color-unused" rowspan="2"></td>
+              <td class="tip" title="channel 8 : Key Code" colspan="7">KC</td>
+              <th class="table-space" rowspan="2"></th>
+              <td rowspan="2">8</td>
+              <td class="color-unused" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="tip" title="channel 8 : Octave" colspan="3">OCT</td>
+              <td class="tip" title="channel 8 : Note" colspan="4">NOTE</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>30</td>
+              <td class="tip" title="channel 1 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td class="tip" title="channel 2 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>2</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td class="tip" title="channel 3 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>3</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td class="tip" title="channel 4 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>4</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td class="tip" title="channel 5 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>5</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td class="tip" title="channel 6 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>6</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>36</td>
+              <td class="tip" title="channel 7 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>7</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>37</td>
+              <td class="tip" title="channel 8 : Key Fraction" colspan="6">KF</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <th class="table-space"></th>
+              <td>8</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>38</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 1 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 1 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>39</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 2 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 2 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>2</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3A</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 3 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 3 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>3</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3B</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 4 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 4 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>4</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3C</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 5 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 5 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>5</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3D</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 6 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 6 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>6</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3E</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 7 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 7 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>7</td>
+              <td class="color-unused"></td>
+            </tr>
+            <tr>
+              <td>3F</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 8 : Phase Modulation Sensitivity" colspan="3">PMS</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="channel 8 : Amplitude Modulation Sensitivity" colspan="2">AMS</td>
+              <th class="table-space"></th>
+              <td>8</td>
+              <td class="color-unused"></td>
+            </tr>
+
+            <tr class="row-section">
+              <td>40</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 1 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 1 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>41</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 2 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 2 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>42</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 3 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 3 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>43</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 4 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 4 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>44</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 5 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 5 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>45</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 6 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 6 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>46</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 7 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 7 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>47</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 8 operator 1" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 8 operator 1" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>48</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 1 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 1 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>49</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 2 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 2 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>4A</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 3 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 3 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>4B</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 4 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 4 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>4C</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 5 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 5 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>4D</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 6 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 6 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>4E</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 7 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 7 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>4F</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 8 operator 3" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 8 operator 3" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>70</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 1 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 1 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>71</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 2 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 2 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>72</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 3 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 3 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>73</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 4 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 4 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>74</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 5 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 5 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>75</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 6 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 6 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>76</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 7 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 7 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>77</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 8 operator 2" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 8 operator 2" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 1 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 1 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 2 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 2 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>7A</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 3 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 3 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>7B</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 4 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 4 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>7C</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 5 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 5 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>7D</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 6 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 6 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7E</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 7 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 7 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>7F</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Detune1 : channel 8 operator 4" colspan="3">DT1</td>
+              <td class="tip" title="Multiple : channel 8 operator 4" colspan="4">MUL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>60</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 1 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>61</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 2 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>62</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 3 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>63</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 4 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>64</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 5 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>65</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 6 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>66</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 7 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>67</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 8 operator 1" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>68</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 1 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>69</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 2 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>6A</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 3 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>6B</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 4 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>6C</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 5 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>6D</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 6 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>6E</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 7 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>6F</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 8 operator 3" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>70</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 1 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>71</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 2 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>72</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 3 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>73</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 4 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>74</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 5 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>75</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 6 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>76</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 7 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>77</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 8 operator 2" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 1 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 2 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>7A</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 3 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>7B</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 4 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7C</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 5 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>7D</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 6 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>7E</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 7 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>7F</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Total Level : channel 8 operator 4" colspan="7">TL</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>80</td>
+              <td class="tip" title="Key Scale : channel 1 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 1 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>81</td>
+              <td class="tip" title="Key Scale : channel 2 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 2 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>82</td>
+              <td class="tip" title="Key Scale : channel 3 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 3 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>83</td>
+              <td class="tip" title="Key Scale : channel 4 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 4 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>84</td>
+              <td class="tip" title="Key Scale : channel 5 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 5 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>85</td>
+              <td class="tip" title="Key Scale : channel 6 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 6 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>86</td>
+              <td class="tip" title="Key Scale : channel 7 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 7 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>87</td>
+              <td class="tip" title="Key Scale : channel 8 operator 1" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 8 operator 1" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>88</td>
+              <td class="tip" title="Key Scale : channel 1 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 1 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>89</td>
+              <td class="tip" title="Key Scale : channel 2 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 2 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>8A</td>
+              <td class="tip" title="Key Scale : channel 3 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 3 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>8B</td>
+              <td class="tip" title="Key Scale : channel 4 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 4 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>8C</td>
+              <td class="tip" title="Key Scale : channel 5 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 5 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>8D</td>
+              <td class="tip" title="Key Scale : channel 6 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 6 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>8E</td>
+              <td class="tip" title="Key Scale : channel 7 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 7 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>8F</td>
+              <td class="tip" title="Key Scale : channel 8 operator 3" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 8 operator 3" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>90</td>
+              <td class="tip" title="Key Scale : channel 1 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 1 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>91</td>
+              <td class="tip" title="Key Scale : channel 2 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 2 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>92</td>
+              <td class="tip" title="Key Scale : channel 3 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 3 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>93</td>
+              <td class="tip" title="Key Scale : channel 4 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 4 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>94</td>
+              <td class="tip" title="Key Scale : channel 5 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 5 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>95</td>
+              <td class="tip" title="Key Scale : channel 6 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 6 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>96</td>
+              <td class="tip" title="Key Scale : channel 7 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 7 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>97</td>
+              <td class="tip" title="Key Scale : channel 8 operator 2" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 8 operator 2" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td class="tip" title="Key Scale : channel 1 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 1 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td class="tip" title="Key Scale : channel 2 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 2 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>9A</td>
+              <td class="tip" title="Key Scale : channel 3 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 3 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>9B</td>
+              <td class="tip" title="Key Scale : channel 4 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 4 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>9C</td>
+              <td class="tip" title="Key Scale : channel 5 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 5 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>9D</td>
+              <td class="tip" title="Key Scale : channel 6 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 6 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>9E</td>
+              <td class="tip" title="Key Scale : channel 7 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 7 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>9F</td>
+              <td class="tip" title="Key Scale : channel 8 operator 4" colspan="2">KS</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="Attack Rate : channel 8 operator 4" colspan="5">AR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+            <tr class="row-section">
+              <td>A0</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 1 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 1 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>A1</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 2 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 2 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 3 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 3 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>A3</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 4 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 4 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>A4</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 5 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 5 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>A5</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 6 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 6 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>A6</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 7 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 7 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>A7</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 8 operator 1">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 8 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>A8</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 1 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 1 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>A9</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 2 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 2 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>AA</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 3 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 3 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>AB</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 4 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 4 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>AC</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 5 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 5 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>AD</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 6 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 6 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>AE</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 7 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 7 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>AF</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 8 operator 3">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 8 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr class="row-section">
+              <td>B0</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 1 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 1 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>B1</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 2 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 2 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>B2</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 3 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 3 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>B3</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 4 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 4 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>B4</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 5 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 5 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>B5</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 6 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 6 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>B6</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 7 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 7 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>B7</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 8 operator 2">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 8 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>B8</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 1 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 1 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>B9</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 2 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 2 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>BA</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 3 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 3 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>BB</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 4 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 4 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>BC</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 5 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 5 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>BD</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 6 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 6 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>BE</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 7 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 7 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>BF</td>
+              <td class="tip" title="Amplitude Modulation Sensitivity Enable : channel 8 operator 4">AME</td>
+              <td class="color-unused"></td>
+              <td class="color-unused"></td>
+              <td class="tip" title="1st Decay Rate : channel 8 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+                        <tr class="row-section">
+              <td>C0</td>
+              <td class="tip" title="Detune 2 : channel 1 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 1 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>C1</td>
+              <td class="tip" title="Detune 2 : channel 2 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 2 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>C2</td>
+              <td class="tip" title="Detune 2 : channel 3 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 3 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>C3</td>
+              <td class="tip" title="Detune 2 : channel 4 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 4 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>C4</td>
+              <td class="tip" title="Detune 2 : channel 5 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 5 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>C5</td>
+              <td class="tip" title="Detune 2 : channel 6 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 6 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>C6</td>
+              <td class="tip" title="Detune 2 : channel 7 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 7 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>C7</td>
+              <td class="tip" title="Detune 2 : channel 8 operator 1" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 8 operator 1" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>C8</td>
+              <td class="tip" title="Detune 2 : channel 1 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 1 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>C9</td>
+              <td class="tip" title="Detune 2 : channel 2 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 2 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>CA</td>
+              <td class="tip" title="Detune 2 : channel 3 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 3 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>CB</td>
+              <td class="tip" title="Detune 2 : channel 4 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 4 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>CC</td>
+              <td class="tip" title="Detune 2 : channel 5 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 5 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>CD</td>
+              <td class="tip" title="Detune 2 : channel 6 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 6 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>CE</td>
+              <td class="tip" title="Detune 2 : channel 7 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 7 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>CF</td>
+              <td class="tip" title="Detune 2 : channel 8 operator 3" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 8 operator 3" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr class="row-section">
+              <td>D0</td>
+              <td class="tip" title="Detune 2 : channel 1 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 1 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>D1</td>
+              <td class="tip" title="Detune 2 : channel 2 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 2 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>D2</td>
+              <td class="tip" title="Detune 2 : channel 3 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 3 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>D3</td>
+              <td class="tip" title="Detune 2 : channel 4 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 4 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>D4</td>
+              <td class="tip" title="Detune 2 : channel 5 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 5 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>D5</td>
+              <td class="tip" title="Detune 2 : channel 6 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 6 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>D6</td>
+              <td class="tip" title="Detune 2 : channel 7 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 7 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>D7</td>
+              <td class="tip" title="Detune 2 : channel 8 operator 2" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 8 operator 2" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>D8</td>
+              <td class="tip" title="Detune 2 : channel 1 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 1 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>D9</td>
+              <td class="tip" title="Detune 2 : channel 2 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 2 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>DA</td>
+              <td class="tip" title="Detune 2 : channel 3 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 3 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>DB</td>
+              <td class="tip" title="Detune 2 : channel 4 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 4 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>DC</td>
+              <td class="tip" title="Detune 2 : channel 5 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 5 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>DD</td>
+              <td class="tip" title="Detune 2 : channel 6 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 6 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>DE</td>
+              <td class="tip" title="Detune 2 : channel 7 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 7 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>DF</td>
+              <td class="tip" title="Detune 2 : channel 8 operator 4" colspan="2">DT2</td>
+              <td class="color-unused"></td>
+              <td class="tip" title="2st Decay Rate : channel 8 operator 4" colspan="5">D1R</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+
+                        <tr class="row-section">
+              <td>E0</td>
+              <td class="tip" title="1st Decay Level : channel 1 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 1 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">1</td>
+            </tr>
+            <tr>
+              <td>E1</td>
+              <td class="tip" title="1st Decay Level : channel 2 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 2 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>E2</td>
+              <td class="tip" title="1st Decay Level : channel 3 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 3 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>E3</td>
+              <td class="tip" title="1st Decay Level : channel 4 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 4 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>E4</td>
+              <td class="tip" title="1st Decay Level : channel 5 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 5 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>E5</td>
+              <td class="tip" title="1st Decay Level : channel 6 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 6 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>E6</td>
+              <td class="tip" title="1st Decay Level : channel 7 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 7 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>E7</td>
+              <td class="tip" title="1st Decay Level : channel 8 operator 1" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 8 operator 1" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>E8</td>
+              <td class="tip" title="1st Decay Level : channel 1 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 1 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">3</td>
+            </tr>
+            <tr>
+              <td>E9</td>
+              <td class="tip" title="1st Decay Level : channel 2 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 2 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>EA</td>
+              <td class="tip" title="1st Decay Level : channel 3 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 3 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>EB</td>
+              <td class="tip" title="1st Decay Level : channel 4 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 4 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>EC</td>
+              <td class="tip" title="1st Decay Level : channel 5 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 5 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>ED</td>
+              <td class="tip" title="1st Decay Level : channel 6 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 6 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>EE</td>
+              <td class="tip" title="1st Decay Level : channel 7 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 7 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>EF</td>
+              <td class="tip" title="1st Decay Level : channel 8 operator 3" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 8 operator 3" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr class="row-section">
+              <td>F0</td>
+              <td class="tip" title="1st Decay Level : channel 1 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 1 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">2</td>
+            </tr>
+            <tr>
+              <td>F1</td>
+              <td class="tip" title="1st Decay Level : channel 2 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 2 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>F2</td>
+              <td class="tip" title="1st Decay Level : channel 3 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 3 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>F3</td>
+              <td class="tip" title="1st Decay Level : channel 4 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 4 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>F4</td>
+              <td class="tip" title="1st Decay Level : channel 5 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 5 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>F5</td>
+              <td class="tip" title="1st Decay Level : channel 6 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 6 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>F6</td>
+              <td class="tip" title="1st Decay Level : channel 7 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 7 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>F7</td>
+              <td class="tip" title="1st Decay Level : channel 8 operator 2" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 8 operator 2" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>F8</td>
+              <td class="tip" title="1st Decay Level : channel 1 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 1 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>1</td>
+              <td rowspan="8">4</td>
+            </tr>
+            <tr>
+              <td>F9</td>
+              <td class="tip" title="1st Decay Level : channel 2 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 2 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>FA</td>
+              <td class="tip" title="1st Decay Level : channel 3 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 3 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>FB</td>
+              <td class="tip" title="1st Decay Level : channel 4 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 4 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>FC</td>
+              <td class="tip" title="1st Decay Level : channel 5 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 5 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>FD</td>
+              <td class="tip" title="1st Decay Level : channel 6 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 6 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>FE</td>
+              <td class="tip" title="1st Decay Level : channel 7 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 7 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>FF</td>
+              <td class="tip" title="1st Decay Level : channel 8 operator 4" colspan="4">D1L</td>
+              <td class="tip" title="Release Rate : channel 8 operator 4" colspan="4">RR</td>
+              <th class="table-space"></th>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <p>参考文献</p>
+        <ul>
+          <li>mxdrv @ ウィキ - FM音源レジスタマップX68k / <a href="http://www16.atwiki.jp/mxdrv/pages/24.html" target="_blank">http://www16.atwiki.jp/mxdrv/pages/24.html</a></li>
+          <li>Yamaha YM2151 データシート</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr />
+      <p><strong>このサイトの情報の正確性は一切保証しません。</strong>誤りの指摘や改善依頼は <a href="https://github.com/nanase/opxdata/issues" target="_blank">こちら</a> からお願いします。</p>      <p>Copyright &copy; 2015 Tomona Nanase</p>
+    </div>
+  </div>
+</body>
+</html>

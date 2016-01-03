@@ -50,7 +50,11 @@
     </div>
 
     <div class="row">
-      <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+      <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2">
+      	<h4>バイトアサイン</h4>
+      	<p>
+      	  0x00 から 0xff まで 1 バイトずつ表示しています。
+      	</p>
         <table class="table table-condensed table-hover table-bordered text-center table-register table-register-byte">
           <thead>
             <tr>
@@ -165,15 +169,21 @@
             </tr>
           </tbody>
         </table>
+        <hr />
       </div>
-      <div class="col-md-12 col-sm-12 col-xs-12 text-right">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" id="suppress_unused" />未使用のレジスタを表示しない
-          </label>
+      
+      <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2">
+        <h4>ビットアサイン</h4>
+      	<p>
+      	  0x00 から 0xff まで 1 ビットずつ表示しています。
+      	</p>
+      	<div class="col-md-12 col-sm-12 col-xs-12 text-right">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="suppress_unused" />未使用のレジスタを表示しない
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
         <table class="table table-condensed table-hover table-bordered text-center table-register table-register-bit">
           <thead>
             <tr>

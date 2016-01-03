@@ -20,10 +20,8 @@
     $(function() {
       $('table.table th[title]').tipTip(tiptip_options);
       $('.tip').tipTip(tiptip_options);
-      //$('.table-register>tbody>tr').filter(function(){return $(this).children('.color-unused').length == 8})
-
       $('#suppress_unused').change(function(){
-        var t = $('.table-register>tbody>tr').filter(function(){return $(this).children('.color-unused').length >= 8})
+        var t = $('.table-register.table-register-bit>tbody>tr').filter(function(){return $(this).children('.color-unused').length >= 8})
         $(this).is(':checked') ? t.hide() : t.show();
       }).prop('checked', false);
     });
@@ -53,7 +51,7 @@
 
     <div class="row">
       <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <table class="table table-condensed table-hover table-bordered text-center table-register">
+        <table class="table table-condensed table-hover table-bordered text-center table-register table-register-byte">
           <thead>
             <tr>
               <th title="レジスタのアドレス">ad</th>
@@ -176,7 +174,7 @@
         </div>
       </div>
       <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
-        <table class="table table-condensed table-hover table-bordered text-center table-register">
+        <table class="table table-condensed table-hover table-bordered text-center table-register table-register-bit">
           <thead>
             <tr>
               <th title="レジスタのアドレス">ad</th>
